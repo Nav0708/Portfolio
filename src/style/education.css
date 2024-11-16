@@ -1,0 +1,75 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:  #1e1e1e;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Card Container */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially moved down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition effect */
+}
+
+.card-header {
+    background-color: turquoise;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Education Section Styles */
+.card-body h5 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.card-body {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Scroll effect for fading and translating the cards */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0); /* Element moves to its original position */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    .card-body h5 {
+        font-size: 1.2rem;
+    }
+
+    .card-body p {
+        font-size: 1rem;
+    }
+}
